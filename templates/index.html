@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document Detection and OCR</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Include Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+        <h1 class="text-3xl font-bold text-center mb-6">Document Detection and OCR</h1>
+        <form method="post" enctype="multipart/form-data" id="upload-form">
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2">Upload an Image:</label>
+                <input type="file" name="image" accept="image/*" required
+                       class="block w-full text-sm text-gray-500
+                              file:mr-4 file:py-2 file:px-4
+                              file:rounded-full file:border-0
+                              file:text-sm file:font-semibold
+                              file:bg-blue-50 file:text-blue-700
+                              hover:file:bg-blue-100"/>
+            </div>
+            <button type="submit"
+                    class="w-full bg-blue-600 text-white py-2 px-4 rounded-md
+                           hover:bg-blue-700 transition duration-200">
+                Extract Text
+            </button>
+        </form>
+        <!-- Loading bar -->
+        <div id="loading-bar" class="w-full bg-gray-200 rounded-full h-2.5 mt-6 hidden">
+            <div class="bg-blue-600 h-2.5 rounded-full animate-pulse" style="width: 100%"></div>
+        </div>
+    </div>
+    <!-- Scripts -->
+    <script>
+        const form = document.getElementById('upload-form');
+        const loadingBar = document.getElementById('loading-bar');
+
+        form.addEventListener('submit', function() {
+            loadingBar.classList.remove('hidden');
+        });
+    </script>
+</body>
+</html>

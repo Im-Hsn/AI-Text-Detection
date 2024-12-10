@@ -1,0 +1,9 @@
+Python==3.10.15
+torch==2.1.2
+torchvision==0.16.2
+ultralytics==8.3.40
+opencv-python-headless==4.8.0.76
+flask==3.0.0
+easyocr==1.7.2
+fpdf==1.7.2
+werkzeug==3.0.0

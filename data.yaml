@@ -1,0 +1,13 @@
+# train: dataset/images/train
+# val: dataset/images/test
+
+# nc: 1  # number of classes
+# names: ['text']  # class names
+
+path: ./dataset/splits/
+train: train/images
+val: test/images
+
+nc: 1
+names: 
+  0: text
